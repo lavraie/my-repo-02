@@ -110,9 +110,9 @@
           range: 'u javascript!C1:C100',
         }).then(function(response) {
           var range = response.result;
-          var ss = SpreadsheetApp.getActiveSpreadsheet();
-          var first = ss.getSheetByName("u javascript");
-          Logger.log(first.getMaxColumns());
+          // var ss = SpreadsheetApp.getActiveSpreadsheet();
+          // var first = ss.getSheetByName("u javascript");
+          // Logger.log(first.getMaxColumns());
           if (range.values.length > 0) {
             // appendPre('Name, Major:');
             for (i = 0; i < range.values.length; i++) {
