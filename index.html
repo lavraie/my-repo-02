@@ -15,7 +15,7 @@
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
-      var CLIENT_ID = '43084856187-ud182jm9van1jv6pf6hpf65en602q4va.apps.googleusercontent.com';
+      var CLIENT_ID = '43084856187-32917tdr7df682dkuuokbki5fe545dti.apps.googleusercontent.com';
       var API_KEY = 'AIzaSyCaq_R9blIY7DUKGpPblnmED7KZ9dQuarg';
 
       // Array of API discovery doc URLs for APIs used by the quickstart
@@ -105,7 +105,7 @@
        */
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1g5WJx1YbSsqNC-nhiaKjjsm2pB6MskKGdrifv_miZcw',
+          spreadsheetId: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRbaQgLz5Bi813sgFsGLZS3yk9ImgYeHooWZlrX2sB5jMiSNA0AdnEHOftcyFknCpe0VMzBlrm70j0H/pubhtmlhttps://docs.google.com/spreadsheets/d/e/2PACX-1vRbaQgLz5Bi813sgFsGLZS3yk9ImgYeHooWZlrX2sB5jMiSNA0AdnEHOftcyFknCpe0VMzBlrm70j0H/pubhtml',
           range: 'Class Data!A2:E',
         }).then(function(response) {
           var range = response.result;
