@@ -105,9 +105,9 @@
        * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
        */
       function listMajors() {
-        gapi.client.sheets.spreadsheets.values.batchGet({
+        gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1g5WJx1YbSsqNC-nhiaKjjsm2pB6MskKGdrifv_miZcw',
-          ranges: ["Sheet4!A:A", "Sheet4!B:B"], 
+          range: "Sheet4!A:A", 
         }).then(function(response) {
           var range1 = response.result;
           if (range1.values.length > 0) {
