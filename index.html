@@ -106,7 +106,7 @@
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1g5WJx1YbSsqNC-nhiaKjjsm2pB6MskKGdrifv_miZcw',
-          range: 'Sheet4!B2:E',
+          range: 'Sheet4!B',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
@@ -114,7 +114,9 @@
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
-              appendPre(row[0] + ', ' + row[4]);
+              appendPre(row[0]);
+              // appendPre(row[0] + ', ' + row[4]);
+
             }
           } else {
             appendPre('No data found.');
