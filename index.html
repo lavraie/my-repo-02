@@ -109,6 +109,7 @@
           range: 'u javascript!C1:C100',
         }).then(function(response) {
           var range = response.result;
+          var lastColumn = sheet.getLastColumn();
           if (range.values.length > 0) {
             // appendPre('Name, Major:');
             for (i = 0; i < range.values.length; i++) {
@@ -116,6 +117,8 @@
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0]);
               appendPre("coucou");
+              appendPre(lastColumn);
+
               
               // appendPre(row[0] + ', ' + row[4]);
 
