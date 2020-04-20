@@ -107,7 +107,7 @@
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1g5WJx1YbSsqNC-nhiaKjjsm2pB6MskKGdrifv_miZcw',
-          range: 'u javascript!C1:C100',
+          range: 'u javascript!C:C',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
@@ -116,7 +116,7 @@
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0]);
-              appendPre("coucou");
+              // appendPre("coucou");
 
               
 
