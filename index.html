@@ -110,9 +110,6 @@
           range: 'u javascript!C1:C100',
         }).then(function(response) {
           var range = response.result;
-          // var ss = SpreadsheetApp.getActiveSpreadsheet();
-          // var first = ss.getSheetByName("u javascript");
-          // Logger.log(first.getMaxColumns());
           if (range.values.length > 0) {
             // appendPre('Name, Major:');
             for (i = 0; i < range.values.length; i++) {
@@ -120,10 +117,8 @@
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0]);
               appendPre("coucou");
-              // appendPre(first.stringify);
 
               
-              // appendPre(row[0] + ', ' + row[4]);
 
             }
           } else {
