@@ -107,7 +107,7 @@
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.batchGet({
           spreadsheetId: '1g5WJx1YbSsqNC-nhiaKjjsm2pB6MskKGdrifv_miZcw',
-          ranges: ['Sheet4!A:A', 'Class Data!A:A'],
+          ranges: ['Sheet4!A:A', 'Sheet4!B:B'],
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
@@ -115,7 +115,7 @@
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
-              appendPre(row[0]);
+              appendPre(row[0] + ' ' + row[0]);
               // appendPre("coucou");
 
               
