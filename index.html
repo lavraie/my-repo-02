@@ -23,7 +23,8 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly" 
+                  "https://www.googleapis.com/auth/spreadsheets";
 
       var authorizeButton = document.getElementById('authorize_button');
       var signoutButton = document.getElementById('signout_button');
@@ -119,7 +120,7 @@
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0]);
               appendPre("coucou");
-              appendPre(lastRow.textContent);
+              appendPre(lastRow);
 
               
               // appendPre(row[0] + ', ' + row[4]);
