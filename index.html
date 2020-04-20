@@ -105,15 +105,15 @@
        * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
        */
       function listMajors() {
-        gapi.client.sheets.spreadsheets.values.get({
+        gapi.client.sheets.spreadsheets.values.batchGet({
           spreadsheetId: '1g5WJx1YbSsqNC-nhiaKjjsm2pB6MskKGdrifv_miZcw',
-          range: 'Sheet4!A:A', 
+          ranges: ["Sheet4!A:A", "Sheet4!B:B"], 
         }).then(function(response) {
-          var ranges = response.result;
-          if (ranges.values.length > 0) {
+          var range1 = response.result;
+          if (range1.values.length > 0) {
             // appendPre('Name, Major:');
-            for (i = 0; i < ranges.values.length; i++) {
-              var row = ranges.values[i];
+            for (i = 0; i < range1.values.length; i++) {
+              var row = range1.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0] + ' ' + row[0]);
               // appendPre("coucou");
