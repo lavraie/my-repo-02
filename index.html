@@ -111,7 +111,7 @@
         }).then(function(response) {
           var range1 = response.result;
           if (range1.values.length > 0) {
-            Logger.log(response.valueRanges);
+            console.log(response.valueRanges);
             // appendPre('Name, Major:');
             for (i = 0; i < range1.values.length; i++) {
               var row = range1.values[i];
