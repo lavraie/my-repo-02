@@ -115,6 +115,15 @@
             console.log(response.result.spreadsheetId);
 
             console.log(response.result.valueRanges.length);
+            
+            if (range1.valueRanges[0].values.length > 
+              range1.valueRanges[1].values.length) {
+            console.log("la plus grande valeur est 0");
+              }
+              else {
+            console.log("la plus grande valeur est 1");
+
+              }
             // appendPre('Name, Major:');
             for (i = 0; i < range1.valueRanges[0].values.length; i++) {
               var row = range1.valueRanges[0].values[i];
@@ -126,14 +135,7 @@
 
               appendPre("coucou");
 
-              if (range1.valueRanges[0].values.length > 
-              range1.valueRanges[1].values.length) {
-            console.log("la plus grande valeur est 0");
-              }
-              else {
-            console.log("la plus grande valeur est 1");
-
-              }
+              
 
             }
           } else {
