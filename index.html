@@ -110,11 +110,11 @@
           ranges: ["Sheet4!A:B", "Sheet4!C:D"],
         }).then(function(response) {
           var range1 = response.result;
-          if (range1.values.length > 0) {
-            console.log(response.result.values.length);
+          if (range1.valueRanges.length > 0) {
+            console.log(response.result.valueRanges.length);
             // appendPre('Name, Major:');
-            for (i = 0; i < range1.values.length; i++) {
-              var row = range1.values[i];
+            for (i = 0; i < range1.valueRanges.length; i++) {
+              var row = range1.valueRanges[i];
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0] + ' ' + row[1]);
               // appendPre("coucou");
