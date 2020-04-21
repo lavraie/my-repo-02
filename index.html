@@ -116,8 +116,12 @@
             // appendPre('Name, Major:');
             for (i = 0; i < range1.valueRanges[0].values.length; i++) {
               var row = range1.valueRanges[0].values[i];
+              var row1 = range1.valueRanges[1].values[i];
+
               // Print columns A and E, which correspond to indices 0 and 4.
               appendPre(row[0] + ' ' + row[1]);
+              appendPre(row1[0] + ' ' + row1[1]);
+
               appendPre("coucou");
 
               
