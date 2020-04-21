@@ -112,7 +112,7 @@
           var range1 = response.result;
           if (range1.valueRanges[0].values.length > 0) {
             console.log(response.result);
-            console.log(response.result.valueRanges[0].length);
+            console.log(response.result.valueRanges.length);
             // appendPre('Name, Major:');
             for (i = 0; i < range1.valueRanges[0].values.length; i++) {
               var row = range1.valueRanges[0].values[i];
